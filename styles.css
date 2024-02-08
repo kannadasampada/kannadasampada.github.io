@@ -1,23 +1,61 @@
+html {
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    overscroll-behavior-x: hidden;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: black;
+    color: white;
     text-align: center;
     padding: 1em;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid transparent; 
+    transition: border-bottom 0.3s ease; 
+}
+
+header a:hover {
+    border-bottom: 2px solid white; 
+}
+
+.content {
+    animation: hu__hu__ infinite 2s ease-in-out;
+    padding: 5px;
+    text-align: center;
+    padding-bottom: 0%;
+}
+
+@keyframes hu__hu__ {
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
+.popup a {
+    text-decoration: none; 
+    color: black;
 }
 
 .section {
     text-align: center;
     margin-top: 20px;
     overflow: hidden;
-    /* Prevents horizontal scrollbar */
 }
 
 .heading {
@@ -84,7 +122,6 @@ header {
     overflow-x: auto;
     align-items: center;
     justify-content: first baseline;
-    /* Center the videos horizontally */
 }
 
 .video-iframe {
@@ -93,8 +130,8 @@ header {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: black;
+    color: white;
     text-align: center;
     align-content: center;
     padding: 1em;
